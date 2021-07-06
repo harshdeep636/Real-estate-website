@@ -1,0 +1,38 @@
+.features{
+    background-color: #fff;
+    grid-column: center-start/center-end;
+    margin:15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap:8rem;
+    align-items:start;
+
+    @media only screen and (max-width:$bp-medium){
+        grid-row: 4/5;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        margin:8rem 0;
+    }
+}
+
+.feature{
+    
+    display:grid;
+    grid-template-columns: min-content auto;
+    grid-column-gap:2rem;
+    grid-row-gap:1.7rem;
+    
+    &-icon{
+        width:4rem;
+        height:4rem;
+        fill:$color-primary-dark;
+        grid-row:1/span 2;
+    }
+
+    &-text{
+       font-size:1.6rem;
+       color:$color-grey-light-2;
+    }
+}
